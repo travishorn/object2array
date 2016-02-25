@@ -1,6 +1,6 @@
 {
   "name": "object2array",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Convert an object to array.",
   "license": "MIT",
   "repository": "egoist/object2array",

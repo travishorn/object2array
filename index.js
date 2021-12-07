@@ -1,10 +1,8 @@
-'use strict'
-
-module.exports = function (obj) {
-	return Object.keys(obj).map(function (key) {
-		return {
-			key: key,
-			value: obj[key]
-		}
-	})
+export default function toArray(object) {
+	return Object.keys(object).map(key =>
+		({
+			key,
+			value: object[key],
+		}),
+	)
 }

@@ -31,6 +31,67 @@ object2array({
 */
 ```
 
+## Options
+
+`keyName`
+
+Default: `'key'`
+
+Example:
+
+```js
+object2array({
+	foo: 'blah',
+	bar: 'oops'
+}, {
+	keyName: 'id',
+})
+
+/*
+[
+	{
+		id: 'foo',
+		value: 'blah'
+	},
+	{
+		id: 'bar',
+		value: 'oops'
+	}
+]
+*/
+```
+
+---
+
+`valueName`
+
+Default: `'value'`
+
+Example:
+
+```js
+object2array({
+	foo: 'blah',
+	bar: 'oops'
+}, {
+	valueName: 'data',
+})
+
+/*
+[
+	{
+		key: 'foo',
+		data: 'blah'
+	},
+	{
+		key: 'bar',
+		data: 'oops'
+	}
+]
+*/
+
+```
+
 ## License
 
 MIT © [EGOIST](https://github.com/egoist)

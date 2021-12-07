@@ -1,6 +1,7 @@
 export default function toArray(object, customOptions) {
 	const defaults = {
 		keyName: 'key',
+		valueName: 'value',
 	}
 
 	const options = Object.assign(defaults, customOptions)
@@ -8,7 +9,7 @@ export default function toArray(object, customOptions) {
 	return Object.keys(object).map(key =>
 		({
 			[options.keyName]: key,
-			value: object[key],
+			[options.valueName]: object[key],
 		}),
 	)
 }

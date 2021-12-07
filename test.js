@@ -13,3 +13,16 @@ test('main', t => {
 		},
 	])
 })
+
+test('rename key', t => {
+	t.deepEqual(toArray({a: 1, b: 2}, {keyName: 'id'}), [
+		{
+			id: 'a',
+			value: 1,
+		},
+		{
+			id: 'b',
+			value: 2,
+		},
+	])
+})

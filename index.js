@@ -1,7 +1,13 @@
-export default function toArray(object) {
+export default function toArray(object, customOptions) {
+	const defaults = {
+		keyName: 'key',
+	}
+
+	const options = Object.assign(defaults, customOptions)
+
 	return Object.keys(object).map(key =>
 		({
-			key,
+			[options.keyName]: key,
 			value: object[key],
 		}),
 	)
